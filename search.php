@@ -5,12 +5,16 @@ get_header();
 
 <div id="wrapper">
 <main>
-
-<!-- if we have posts...
-show me the post!!!
-If not...
-we do not have posts! -->
 <?php if(have_posts()) : ?>
+    <h1 class="page-title">
+<?php _e( 'Search results for: ', 'site1' ); ?>
+<span class="page-description"><?php echo get_search_query(); ?>
+</span>
+</h1>
+
+<h2 class="pagetitle">Our findings for 
+    <?php /* Search Count */ 
+    $allsearch = new WP_Query("s=$s&showposts=-1"); $key = wp_specialchars($s, 1); $count = $allsearch->post_count; _e(''); _e('<span class="search-terms">'); echo $key; _e('</span>'); _e(' &mdash; '); echo $count . ' '; _e('articles/pages'); wp_reset_query(); ?></h2>
 
 <?php while(have_posts()) : the_post() ; ?>
 <article class="posts">
@@ -29,17 +33,20 @@ we do not have posts! -->
 </div>
 <!-- +++ end thumbnail +++ -->
 <?php the_excerpt() ; ?>
-<span class="block"><a href="<?php the_permalink(); ?>">Read More about <?php the_title(); ?></a></span>
+<span class="block">
+<a href="<?php the_permalink(); ?>">Read More about <?php the_title(); ?>
+</a></span>
 </article>
 <?php endwhile; ?>
 
 <?php else : ?>
-
-<?php echo
-'<h2>Search Results:</h2>
+<h1 class="page-title">
+<?php _e( 'No content for: ', 'site1' ); ?>
+<span class="page-description"><?php echo get_search_query(); ?>
+</span>
+</h1>
 <p>Sorry, but nothing matched your search terms. <br>
-Would you like to search again with different keywords?</p>';
-?>
+Would you like to search again with different keywords?</p>
 <?php get_search_form(); ?>
 <?php endif; ?>
 
@@ -48,7 +55,7 @@ Would you like to search again with different keywords?</p>';
 
 
 <aside>
-This is the INDEX page!!!!
+This is my SEARCH page!!!!
 </aside>
 
 

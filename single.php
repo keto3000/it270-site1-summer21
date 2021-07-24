@@ -23,14 +23,20 @@ we do not have posts! -->
 <?php endwhile; ?>
 
 <?php else : ?>
-<?php echo wp_autop('Sorry, no posts were found!'); ?>
+    <?php echo
+'<h2>Search Results:</h2>
+<p>Sorry, but nothing matched your search terms. <br>
+Would you like to search again with different keywords?</p>';
+?>
+<?php get_search_form(); ?>
 <?php endif; ?>
+
 <?php comments_template(); ?>
 </main>
 
 
 <aside>
-
+This is my SINGLE page
 </aside>
 
 
