@@ -3,7 +3,12 @@ get_header();
 
 ?>
 
-<div id="wrapper">
+<div id="hero">
+    <img src="<?php echo get_template_directory_uri(); ?>/../../uploads/yellowstone-inner.jpg" alt="banner">
+</div>
+<!--+++ END hero ++++-->
+
+<div class="wrapper">
 <main>
 <!-- if we have posts...
 show me the post!!!
@@ -30,6 +35,11 @@ Would you like to search again with different keywords?</p>';
 ?>
 <?php get_search_form(); ?>
 <?php endif; ?>
+
+<span class="next-previous">
+<?php (previous_post_link()) ? '%link' : ''; ?> &nbsp; &nbsp; <?php (next_post_link()) ? '%link' : ''; ?>
+</span>
+
 
 <?php comments_template(); ?>
 </main>

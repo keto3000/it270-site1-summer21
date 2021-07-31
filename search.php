@@ -3,11 +3,15 @@ get_header();
 
 ?>
 
-<div id="wrapper">
+<div id="search-error">
+<img src="<?php echo get_template_directory_uri(); ?>/../../uploads/searching.jpg" alt="searching">
+</div>
+
+<div class="wrapper">
 <main>
 <?php if(have_posts()) : ?>
     <h1 class="page-title">
-<?php _e( 'Search results for: ', 'site1' ); ?>
+<?php _e( 'Search results for: ', 'siteSummer1' ); ?>
 <span class="page-description"><?php echo get_search_query(); ?>
 </span>
 </h1>
@@ -41,7 +45,7 @@ get_header();
 
 <?php else : ?>
 <h1 class="page-title">
-<?php _e( 'No content for: ', 'site1' ); ?>
+<?php _e( 'No content for: ', 'siteSummer1' ); ?>
 <span class="page-description"><?php echo get_search_query(); ?>
 </span>
 </h1>

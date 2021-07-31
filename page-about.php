@@ -1,6 +1,6 @@
 <?php
 get_header();
-/* Template Name: Tours Page */
+/* Template Name: About Page */
 ?>
 
 <div id="hero">
@@ -23,18 +23,13 @@ get_header();
 </main>
 
 <aside id="secondary"class="widget-area">
-    <?php dynamic_sidebar('sidebar-tours'); ?>
-</aside> <!--+++ #secondary +++ -->
+    <?php dynamic_sidebar('sidebar-about'); ?>
+</aside> 
+<!--+++ #secondary +++ -->
 
 </div>
 <!-- ++++ end wrapper +++++ -->
-
-<div class="full-width">
-<?php dynamic_sidebar('sidebar-buy'); ?>
-</div>
-<!--++++  END full-width +++++ -->
-
-
-<?php 
+<?php
 get_footer();
+
 ?>

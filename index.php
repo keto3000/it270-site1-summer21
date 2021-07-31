@@ -3,7 +3,12 @@ get_header();
 
 ?>
 
-<div id="wrapper">
+<div id="hero">
+    <img src="<?php echo get_template_directory_uri(); ?>/../../uploads/yellowstone-inner.jpg" alt="banner">
+</div>
+<!--+++ END hero ++++-->
+
+<div class="wrapper">
 <main>
 
 <!-- if we have posts...
@@ -46,12 +51,7 @@ Would you like to search again with different keywords?</p>';
 <!-- ++++ PLEASE REMEMBER,  the search results originally work off of the index.php page ++++++ -->
 </main>
 
-
-<aside>
-This is the INDEX page!!!!
-</aside>
-
-
+<?php get_sidebar(); ?>
 
 </div>
 <!-- ++++ end wrapper +++++ -->
