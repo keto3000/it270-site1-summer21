@@ -3,13 +3,12 @@ get_header();
 
 ?>
 
-<div id="search-error">
-<img src="<?php echo get_template_directory_uri(); ?>/../../uploads/searching.jpg" alt="searching">
-</div>
-
 <div class="wrapper">
 <main>
 <?php if(have_posts()) : ?>
+    <div id="search-error">
+    <img src="<?php echo get_template_directory_uri(); ?>/../../uploads/balloon.jpg" alt="search success" >
+</div>
     <h1 class="page-title">
 <?php _e( 'Search results for: ', 'siteSummer1' ); ?>
 <span class="page-description"><?php echo get_search_query(); ?>
@@ -44,6 +43,9 @@ get_header();
 <?php endwhile; ?>
 
 <?php else : ?>
+    <div id="search-error">
+    <img src="<?php echo get_template_directory_uri(); ?>/../../uploads/searching.jpg" alt="still searching" > 
+    </div>
 <h1 class="page-title">
 <?php _e( 'No content for: ', 'siteSummer1' ); ?>
 <span class="page-description"><?php echo get_search_query(); ?>
@@ -57,12 +59,9 @@ Would you like to search again with different keywords?</p>
 <!-- ++++ PLEASE REMEMBER,  the search results originally work off of the index.php page ++++++ -->
 </main>
 
-
 <aside>
 This is my SEARCH page!!!!
 </aside>
-
-
 
 </div>
 <!-- ++++ end wrapper +++++ -->

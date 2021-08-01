@@ -162,7 +162,7 @@ header {
 
 .wrapper {
   max-width: 1100px;
-  margin: 20px auto;
+  margin: 20px 15px;
   clear: both;
   background: #fff;
 }
