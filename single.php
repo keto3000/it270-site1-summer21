@@ -44,11 +44,7 @@ Would you like to search again with different keywords?</p>';
 <?php comments_template(); ?>
 </main>
 
-
-<aside>
-This is my SINGLE page
-</aside>
-
+<?php get_sidebar(); ?>
 
 
 </div>

@@ -1,10 +1,11 @@
 <!doctype html>
-<html <?php language_attributes();?>>
+<html <?php language_attributes() ;?> >
 <head>
-<meta charset="<?php bloginfo('charset');?>">
-<title><?php bloginfo('name');?></title>
+<meta charset="<?php bloginfo( 'charset' );?>">
+<meta name=”viewport” content="width=device-width, initial-scale=1.0" >
+<title><?php bloginfo( 'name' );?></title>
 <link href="<?php bloginfo('stylesheet_url');?>" rel="stylesheet" type="text/css">
-<?php wp_head();?>
+<?php wp_head(); ?>
 </head>
 <body <?php body_class(! is_front_page() ? "inner-page" : "" ); ?>>
 <header>

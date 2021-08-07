@@ -22,7 +22,7 @@ get_header();
 
 </main>
 
-<aside id="secondary"class="widget-area">
+<aside id="secondary" class="widget-area">
     <?php dynamic_sidebar('sidebar-tours'); ?>
 </aside> <!--+++ #secondary +++ -->
 

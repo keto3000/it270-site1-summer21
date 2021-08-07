@@ -12,7 +12,8 @@ add_theme_support('post-thumbnails');
 register_nav_menus(array(
     'primary' => 'Primary Menu',
     'tours' => 'Tours Menu',
-    'footer' => 'Footer Menu'
+    'footer' => 'Footer Menu',
+    'hotels' => 'Hotels Menu'
 ));
 
 //Page Slug Body Class
@@ -156,32 +157,31 @@ if(isset($_GET['today'])) {
 switch($today) {
     
     case 'Sunday':
-    $content = "Today\'s special takes us to Alaska! Let\'s add some information about Glaciers! To learn more about Glacier Specials, click <a href=''>here</a>";
+    $content = "Today's special takes us to Alaska! Let's add some information about Glaciers! To learn more about Glacier Specials, click <a href=''>here</a>";
     break;
 
     case 'Monday':
-    $content = "Today\'s special is Mt Denali! Let\'s add some information about alaska and Anchorage! To learn more about our Cooler Specials, click <a href=''>here</a>";
+    $content = "Today's special is Mt Denali! Let's add some information about alaska and Anchorage! To learn more about our Cooler Specials, click <a href=''>here</a>";
     break;
 
     case 'Tuesday':
-    $content = "Today\'s special brings us to another Glacier! Let\'s asd some information about our Glacier Park! To learn more about Montana Specials, click <a href=''>here</a>";
+    $content = "Today's special brings us to another Glacier! Let's asd some information about our Glacier Park! To learn more about Montana Specials, click <a href=''>here</a>";
     break;
 
     case 'Wednesday':
-    $content = "Today\'s special is good old Yellowstone! Let\'s asd some information about Yellowstone! To learn more about Yellowstone Specials, click <a href=''>here</a>";
+    $content = "Today's special is good old Yellowstone! Let's asd some information about Yellowstone! To learn more about Yellowstone Specials, click <a href=''>here</a>";
     break;
 
     case 'Thursday':
-    $content = "Today\'s special takes us to Washington State\'s Wine Country! Let\'s add some information about Washington Wineries! To learn more about Washington Wineries Specials,  click <a href=''>here</a>";
+    $content = "Today's special takes us to Washington State's Wine Country! Let's add some information about Washington Wineries! To learn more about Washington Wineries Specials,  click <a href=''>here</a>";
     break;
 
-    
     case 'Friday':
-    $content = "Today\'s special is New York City! Let\'s add some information about the Metropolitan Opera! To learn more about our NEW York City Specials, click <a href=''>here</a>";
+    $content = "Today's special is New York City! Let's add some information about the Metropolitan Opera! To learn more about our New York City Specials, click <a href=''>here</a>";
     break;
 
     case 'Saturday':
-    $content = "Today\'s special is good old Yellowstone! Let\'s asd some information about Yellowstone! To learn more about Yellowstone Specials, click <a href=''>here</a>";
+    $content = "Today's special is good old Yellowstone! Let's asd some information about Yellowstone! To learn more about Yellowstone Specials, click <a href=''>here</a>";
     break;
 }
 
@@ -204,3 +204,5 @@ function year() {
 }
 
 add_shortcode('current_year', 'year' );
+
+remove_filter('the_content', 'wpautop');
